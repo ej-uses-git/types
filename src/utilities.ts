@@ -3,3 +3,13 @@
  * and determines whether it is a desired item or not.
  */
 export type FinderFunction = (arg: any, index?: number) => boolean;
+
+export interface DefaultFindByOptions {
+  matches: '===';
+  recursive: true;
+}
+
+export interface FindByOptions {
+  matches: '===' | '!==' | '>=' | '>' | '<=' | '<';
+  recursive: boolean;
+}
